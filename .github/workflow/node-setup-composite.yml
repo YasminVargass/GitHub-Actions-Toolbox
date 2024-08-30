@@ -1,0 +1,23 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+permissions:
+  pull-requests: read
+
+jobs:
+  composite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Composite Action
+        uses: ./.github/actions/composite-setup
+        with:
+          node-version: '18'
