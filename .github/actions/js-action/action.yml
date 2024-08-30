@@ -1,0 +1,10 @@
+name: 'My JavaScript Action'
+description: 'A simple JavaScript action'
+inputs:
+  message:
+    description: 'A message to print'
+    required: true
+    default: 'Hello, world!'
+runs:
+  using: 'node12'
+  main: 'src/index.js'

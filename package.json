@@ -10,6 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^9.9.1",
-    "globals": "^15.9.0"
+    "globals": "^15.9.0",
+    "@actions/core": "^1.10.0"
   }
+  
 }

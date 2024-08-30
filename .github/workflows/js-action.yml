@@ -1,0 +1,23 @@
+name: JavaScript Action
+
+on:
+    push:
+      branches:
+        - main
+    pull_request:
+      branches:
+        - main
+permissions:
+    pull-requests: read
+  
+jobs:
+  js-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run JavaScript Action
+        uses: ./.github/actions/my-js-action
+        with:
+          message: 'Hello from GitHub Actions!'
