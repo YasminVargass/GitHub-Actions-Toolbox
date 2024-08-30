@@ -1,0 +1,21 @@
+name: Run Docker Action
+
+on:
+    workflow_run:
+      workflows: ["JavaScript Action"]
+      types:
+        - completed
+permissions:
+    pull-requests: read
+
+jobs:
+  docker-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Docker Action
+        uses: ./.github/actions/docker-action
+        with:
+          message: 'Hello from Docker Action!'
