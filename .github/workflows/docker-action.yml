@@ -16,6 +16,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Docker Action
-        uses: .github/actions/docker-action
+        uses: ./.github/actions/docker-action
         with:
           message: 'Hello from Docker Action!'
