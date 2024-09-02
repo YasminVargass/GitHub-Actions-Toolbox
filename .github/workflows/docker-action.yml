@@ -4,7 +4,7 @@ on:
     workflow_run:
       workflows: ["JavaScript Action"]
       types:
-        - completed
+        - completed 
 permissions:
     pull-requests: read
 
