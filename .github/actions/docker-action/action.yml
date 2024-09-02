@@ -9,4 +9,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - node
+    - '.github/js-action/src/index.js'
     - ${{ inputs.message }}
