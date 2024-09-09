@@ -19,3 +19,4 @@ jobs:
         uses: ./.github/actions/docker-action
         with:
           message: 'Hello from Docker Action!'
+          working-directory: ${{ github.workspace }}  

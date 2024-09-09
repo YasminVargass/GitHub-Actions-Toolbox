@@ -7,8 +7,8 @@ inputs:
     default: 'Hello, world!'
 runs:
   using: 'docker'
-  image: '../../Dockerfile'
+  image: 'Dockerfile'
   args:
     - node
-    - '/app/.github/js-action/src/index.js'
+    - 'app/.github/js-action/src/index.js'
     - ${{ inputs.message }}
