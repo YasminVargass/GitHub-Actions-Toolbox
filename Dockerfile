@@ -14,4 +14,4 @@ RUN npm install
 COPY . .
 
 # Comando para iniciar a aplicação
-CMD ["node", ".github/js-action/src/index.js"]
+CMD ["node", "/app/.github/js-action/src/index.js"]
