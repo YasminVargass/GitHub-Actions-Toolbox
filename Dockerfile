@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copiar o restante do código
-COPY . .
+COPY .github/actions/js-action/ /app/
 
 # Comando para iniciar a aplicação
-CMD ["node", "/app/.github/js-action/src/index.js"]
+CMD ["node", "src/index.js"]

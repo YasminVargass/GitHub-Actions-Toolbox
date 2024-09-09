@@ -10,5 +10,5 @@ runs:
   image: 'Dockerfile'
   args:
     - node
-    - 'app/.github/js-action/src/index.js'
+    - 'src/index.js'
     - ${{ inputs.message }}
