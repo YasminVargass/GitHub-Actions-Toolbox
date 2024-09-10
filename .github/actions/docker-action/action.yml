@@ -1,14 +1,14 @@
-name: 'My Docker Action'
-description: 'A Docker action that runs a Node.js script'
-inputs:
-  message:
-    description: 'A message to print'
-    required: true
-    default: 'Hello, world!'
+name: 'Docker Welcome Action'
+description: 'Displays a welcome message to the user.'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - node
-    - 'src/index.js'
-    - ${{ inputs.message }}
+    - ${{ inputs.name }}
+
+inputs:
+  name:
+    description: 'Welcome'
+    required: false
+    default: 'Welcome!!'

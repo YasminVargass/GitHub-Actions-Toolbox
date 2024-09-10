@@ -1,17 +1,14 @@
-# Usar uma imagem base oficial do Node.js
-FROM node:14
+# Defina a imagem base
+FROM debian:bullseye-slim
 
-# Configurar o diretório de trabalho
+# Defina o diretório de trabalho
 WORKDIR /app
 
-# Copiar package.json e package-lock.json
-COPY package*.json ./
+# Copie o script de entrada para o contêiner
+COPY entrypoint.sh /entrypoint.sh
 
-# Instalar as dependências
-RUN npm install
+# Dê permissão de execução ao script
+RUN chmod +x /entrypoint.sh
 
-# Copiar o restante do código
-COPY .github/actions/js-action/ /app/
-
-# Comando para iniciar a aplicação
-CMD ["node", "src/index.js"]
+# Defina o script como ponto de entrada
+ENTRYPOINT ["/entrypoint.sh"]
