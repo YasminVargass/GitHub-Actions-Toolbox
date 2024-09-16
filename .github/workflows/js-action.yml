@@ -28,3 +28,4 @@ jobs:
         uses: ./.github/actions/js-action
         with:
           message: 'Hello from GitHub Actions!'
+          
